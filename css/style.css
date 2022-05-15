@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-size: 16px;
+  background: linear-gradient(to bottom, rgb(47, 150, 163), rgb(48, 62, 143));
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  color: white;
+}
+
+.weather-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7rem;
+}
+
+.timezone,
+.temp {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timezone__title {
+  font-size: 2.5em;
+}
+.timezone__icon {
+  width: 100px;
+}
+
+.temp {
+  height: 150px;
+  flex-direction: column;
+}
+.temp__header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.temp__title {
+  font-size: 2em;
+}
+.temp__symbol {
+  font-size: 1.5em;
+}
+.temp__desc {
+  text-transform: capitalize;
+}/*# sourceMappingURL=style.css.map */
