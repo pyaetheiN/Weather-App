@@ -28,14 +28,19 @@ window.addEventListener('load', () => {
           console.log(data);
           
           const {temp} = data.main;
-          const {description, icon} = data.weather[0];
+          const {description} = data.weather[0];
+          const {icon} = data.weather[0];
           const {country} = data.sys;
+
+          const imageSrc = 'icons/' + `${icon}` + '.png';
+          console.log({icon})
+          console.log(imageSrc);
 
           // set dom elements from api
           temperature.innerText = temp;
           temperatureDesc.innerText = description;
           timezone.innerText = country;
-          iconEl.innerHTML = `<img class="timezone__icon" src="icons/${icon}.png" alt="icon">`;
+          iconEl.src = imageSrc;
 
           // formula for fahrenheit
           let fahrenheit = (temp * 1.8) + 32;
